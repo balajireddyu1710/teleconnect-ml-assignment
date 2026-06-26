@@ -1,10 +1,12 @@
-
-
-1\. Project Overview
+\# Regression Model Evaluation Report
 
 
 
-This report summarizes the performance of multiple regression algorithms developed to predict \*\*MonthlyCharges\*\* using the Telco Customer Churn dataset. The objective is to accurately estimate the monthly charges of customers based on demographic, account, and service-related attributes.
+\## 1. Project Overview
+
+
+
+This report summarizes the performance of multiple supervised machine learning regression models developed to predict customer \*\*MonthlyCharges\*\* using the Telco Customer Churn dataset. The objective is to accurately estimate the monthly charges of customers based on demographic, account, and service-related attributes, enabling better analysis of customer billing patterns.
 
 
 
@@ -12,33 +14,27 @@ This report summarizes the performance of multiple regression algorithms develop
 
 
 
-2\. Dataset Information
+\## 2. Dataset Information
 
 
 
-| \*\*Attribute\*\*       | \*\*Value\*\*            |
+\*\*Dataset:\*\* Telco Customer Churn
 
-| ------------------- | -------------------- |
+\*\*Problem Type:\*\* Regression
 
-| \*\*Dataset\*\*         | Telco Customer Churn |
+\*\*Target Variable:\*\* MonthlyCharges
 
-| \*\*Problem Type\*\*    | Regression           |
+\*\*Total Records:\*\* 7,043
 
-| \*\*Target Variable\*\* | MonthlyCharges       |
-
-| \*\*Total Records\*\*   | 7,043                |
-
-| \*\*Training Set\*\*    | 70% (4,930 records)  |
-
-| \*\*Validation Set\*\*  | 15% (1,056 records)  |
-
-| \*\*Testing Set\*\*     | 15% (1,057 records)  |
+\*\*Train/Test Split:\*\* 70% Training, 15% Validation, 15% Testing
 
 
 
+\---
 
 
-3\. Data Preprocessing
+
+\## 3. Data Preprocessing
 
 
 
@@ -46,75 +42,29 @@ The following preprocessing techniques were applied before model training:
 
 
 
-\- Missing value handling
+\* Missing value handling
 
-\- Label Encoding of binary categorical features
+\* Label Encoding of binary categorical variables
 
-\- One-Hot Encoding of categorical variables
+\* One-Hot Encoding of categorical features
 
-\- Feature Engineering
-
-&#x20; - Average Monthly Spend
-
-&#x20; - Service Count
-
-&#x20; - Contract Value
-
-\- Standard Scaling for Lasso and SVR
-
-\- Hyperparameter tuning using GridSearchCV
-
-\- Model persistence using Pickle
+\* Feature Engineering
 
 
 
+&#x20; \* Average Monthly Spend
 
+&#x20; \* Service Count
 
-4\. Regression Models Evaluated
+&#x20; \* Contract Value
 
+\* Standard Scaling for Lasso Regression and Support Vector Regressor (SVR)
 
+\* Stratified Train/Validation/Test Split
 
-The following regression algorithms were trained and evaluated:
+\* Hyperparameter tuning using GridSearchCV
 
-
-
-\- Linear Regression
-
-\- Ridge Regression
-
-\- Lasso Regression
-
-\- Elastic Net Regression
-
-\- Decision Tree Regressor
-
-\- Random Forest Regressor
-
-\- Support Vector Regressor (SVR)
-
-
-
-
-
-5\. Evaluation Metrics
-
-
-
-The models were evaluated using the following metrics:
-
-
-
-\- Mean Absolute Error (MAE)
-
-\- Mean Squared Error (MSE)
-
-\- Root Mean Squared Error (RMSE)
-
-\- Coefficient of Determination (R²)
-
-\- Adjusted R²
-
-\- Training Time
+\* Model serialization using Pickle
 
 
 
@@ -122,73 +72,131 @@ The models were evaluated using the following metrics:
 
 
 
-6\. Model Performance Comparison
+\## 4. Regression Models Evaluated
 
 
 
-| Model | MAE | MSE | RMSE | R² | Adjusted R² | Training Time (s) |
-
-|-------|-----|-----|------|----|-------------|-------------------|
-
-| Linear Regression | 0.785868 | 1.071030 | 1.034906 | 0.998793 | 0.998757 | 0.067227 |
-
-| Ridge Regression | 0.785850 | 1.070991 | 1.034887 | 0.998793 | 0.998757 | 5.032951 |
-
-| Lasso Regression | 0.785692 | 1.070839 | 1.034813 | 0.998793 | 0.998757 | 0.124784 |
-
-| Elastic Net Regression | 0.785677 | 1.070902 | 1.034844 | 0.998793 | 0.998757 | 2.383212 |
-
-| Decision Tree Regressor | 0.837972 | 1.286676 | 1.134317 | 0.998549 | 0.998507 | 1.176767 |
-
-| Random Forest Regressor | 0.784375 | 1.149523 | 1.072158 | 0.998704 | 0.998666 | 18.165512 |
-
-| Support Vector Regressor (SVR) | 0.850633 | 1.220002 | 1.104537 | 0.998625 | 0.998584 | 20.862295 |          
+The following supervised machine learning regression algorithms were trained and evaluated:
 
 
 
-\---
+\* Linear Regression
 
-7\. Best Performing Model
+\* Ridge Regression
 
+\* Lasso Regression
 
+\* Elastic Net Regression
 
-Lasso Regression
+\* Decision Tree Regressor
 
+\* Random Forest Regressor
 
-
-Lasso Regression achieved the best overall performance among the evaluated regression models.
-
-
-
-Reasons
-
-
-
-\- Lowest Mean Squared Error (\*\*MSE = 1.070839\*\*)
-
-\- Lowest Root Mean Squared Error (\*\*RMSE = 1.034813\*\*)
-
-\- Highest R² Score (\*\*0.998793\*\*)
-
-\- Highest Adjusted R² (\*\*0.998757\*\*)
-
-\- Fast training time (\*\*0.124784 seconds\*\*)
-
-\- Produces a simple and interpretable model through L1 regularization.
-
-
-
-Although Random Forest achieved the lowest MAE, Lasso Regression demonstrated the best balance between prediction accuracy, computational efficiency, and model generalization.
+\* Support Vector Regressor (SVR)
 
 
 
 \---
 
-8\. Model Interpretation
+
+
+\## 5. Evaluation Metrics
 
 
 
-The regression models were analyzed to understand the contribution of input features.
+The following metrics were used to compare model performance:
+
+
+
+\* Mean Absolute Error (MAE)
+
+\* Mean Squared Error (MSE)
+
+\* Root Mean Squared Error (RMSE)
+
+\* Coefficient of Determination (R² Score)
+
+\* Adjusted R² Score
+
+\* Training Time
+
+
+
+\---
+
+
+
+\## 6. Performance Comparison
+
+
+
+| Model                          |      MAE |      MSE |     RMSE | R² Score | Adjusted R² | Training Time (s) |
+
+| ------------------------------ | -------: | -------: | -------: | -------: | ----------: | ----------------: |
+
+| Linear Regression              | 0.785868 | 1.071030 | 1.034906 | 0.998793 |    0.998757 |          0.067227 |
+
+| Ridge Regression               | 0.785850 | 1.070991 | 1.034887 | 0.998793 |    0.998757 |          5.032951 |
+
+| Lasso Regression               | 0.785692 | 1.070839 | 1.034813 | 0.998793 |    0.998757 |          0.124784 |
+
+| Elastic Net Regression         | 0.785677 | 1.070902 | 1.034844 | 0.998793 |    0.998757 |          2.383212 |
+
+| Decision Tree Regressor        | 0.837972 | 1.286676 | 1.134317 | 0.998549 |    0.998507 |          1.176767 |
+
+| Random Forest Regressor        | 0.784375 | 1.149523 | 1.072158 | 0.998704 |    0.998666 |         18.165512 |
+
+| Support Vector Regressor (SVR) | 0.850633 | 1.220002 | 1.104537 | 0.998625 |    0.998584 |         20.862295 |
+
+
+
+\---
+
+
+
+\## 7. Best Performing Model
+
+
+
+\### Lasso Regression
+
+
+
+Lasso Regression achieved the best overall performance among all evaluated regression models.
+
+
+
+\### Reasons
+
+
+
+\* Lowest Mean Squared Error (\*\*MSE = 1.070839\*\*)
+
+\* Lowest Root Mean Squared Error (\*\*RMSE = 1.034813\*\*)
+
+\* Highest R² Score (\*\*0.998793\*\*)
+
+\* Highest Adjusted R² Score (\*\*0.998757\*\*)
+
+\* Fast training time (\*\*0.124784 seconds\*\*)
+
+\* L1 regularization helps reduce overfitting and produces a simpler, more interpretable model by shrinking less important feature coefficients toward zero.
+
+
+
+Although \*\*Random Forest Regressor\*\* achieved the lowest MAE, \*\*Lasso Regression\*\* provided the best overall balance between prediction accuracy, computational efficiency, and model generalization.
+
+
+
+\---
+
+
+
+\## 8. Model Interpretation
+
+
+
+To improve model interpretability, multiple explanation techniques were applied.
 
 
 
@@ -196,7 +204,7 @@ The regression models were analyzed to understand the contribution of input feat
 
 
 
-\- Feature coefficients were examined for Linear Regression, Ridge, Lasso, and Elastic Net to identify how each feature influenced the predicted monthly charges.
+\* Regression coefficients were analyzed for Linear Regression, Ridge Regression, Lasso Regression, and Elastic Net Regression to understand the direction and magnitude of each feature's influence on monthly charges.
 
 
 
@@ -204,29 +212,29 @@ The regression models were analyzed to understand the contribution of input feat
 
 
 
-\- Tree-based feature importance analysis was performed for Decision Tree and Random Forest Regressors to determine the most influential predictors.
+\* Feature importance scores were extracted from Decision Tree and Random Forest Regressors to identify the most influential predictors affecting customer monthly charges.
 
 
 
+\---
 
 
 
-
-9\. Visualizations Generated
-
-
-
-The following visualizations were produced during regression model evaluation:
+\## 9. Visualizations Generated
 
 
 
-\- Actual vs Predicted Scatter Plot
+The following visualizations were produced during model evaluation:
 
-\- Residual Error Distribution
 
-\- Coefficient Importance Plot
 
-\- Tree-based Feature Importance Plot
+\* Actual vs Predicted Scatter Plot
+
+\* Residual Error Distribution
+
+\* Regression Coefficient Importance Plot
+
+\* Tree-Based Feature Importance Plot
 
 
 
@@ -234,47 +242,49 @@ All figures are available in the \*\*reports/figures/\*\* directory.
 
 
 
-
-
-\---
-
-10\. Conclusion
-
-
-
-Seven regression algorithms were evaluated to predict customer \*\*MonthlyCharges\*\* using the Telco Customer Churn dataset.
-
-
-
-Among the evaluated models, \*\*Lasso Regression\*\* demonstrated the best overall predictive performance by achieving the lowest MSE and RMSE while maintaining an excellent R² score of \*\*0.998793\*\*. The model effectively applies L1 regularization, improving generalization while maintaining high prediction accuracy. Linear Regression, Ridge Regression, and Elastic Net produced nearly identical results, indicating a strong linear relationship between the input features and the target variable. Random Forest achieved the lowest MAE but required substantially longer training time, whereas Decision Tree and SVR exhibited comparatively higher prediction errors.
-
-
-
-Overall, the regression pipeline incorporates preprocessing, feature engineering, hyperparameter optimization, evaluation, visualization, model interpretation, and model persistence, resulting in a complete, reproducible, and efficient machine learning workflow.
-
-
-
 \---
 
 
 
-11\. Future Work
+\## 10. Conclusion
 
 
 
-Possible improvements include:
+Seven supervised machine learning regression algorithms were evaluated to predict customer \*\*MonthlyCharges\*\*.
 
 
 
-\- Gradient Boosting Regressors (XGBoost, LightGBM, CatBoost)
+Among the evaluated models, \*\*Lasso Regression\*\* demonstrated the best overall predictive performance by achieving the lowest MSE and RMSE while maintaining an excellent R² Score of \*\*0.998793\*\*. Linear Regression, Ridge Regression, and Elastic Net Regression produced nearly identical results, indicating that the relationship between the input features and monthly charges is predominantly linear. Although Random Forest Regressor achieved the lowest MAE, it required substantially more training time. Decision Tree Regressor and Support Vector Regressor (SVR) showed comparatively higher prediction errors.
 
-\- Bayesian Hyperparameter Optimization
 
-\- Automated Feature Selection
 
-\- Ensemble Regression Models
+The developed regression pipeline includes preprocessing, feature engineering, hyperparameter optimization, model evaluation, model interpretation, visualization, and model persistence, providing a complete and reproducible machine learning workflow.
 
-\- Model Deployment using Flask or FastAPI
 
-\- Real-time Monthly Charges Prediction Dashboard
+
+\---
+
+
+
+\## 11. Future Work
+
+
+
+Future improvements may include:
+
+
+
+\* Gradient Boosting methods (XGBoost, LightGBM, CatBoost)
+
+\* Bayesian Hyperparameter Optimization
+
+\* Advanced feature selection techniques
+
+\* Ensemble regression methods
+
+\* Model deployment using Flask or FastAPI
+
+\* Real-time Monthly Charges prediction dashboard
+
+
 
