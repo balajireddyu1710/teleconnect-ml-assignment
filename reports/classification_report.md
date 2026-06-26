@@ -1,5 +1,6 @@
 
 
+
 1. Project Overview
 
 This report summarizes the performance of multiple supervised machine learning classification models developed to predict customer churn using the Telco Customer Churn dataset. The objective is to accurately identify customers who are likely to discontinue the service, enabling businesses to implement effective customer retention strategies.
