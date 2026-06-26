@@ -1,8 +1,8 @@
-\# Regression Model Evaluation Report
 
 
 
-\## 1. Project Overview
+
+1\. Project Overview
 
 
 
@@ -10,31 +10,31 @@ This report summarizes the performance of multiple supervised machine learning r
 
 
 
-\---
 
 
 
-\## 2. Dataset Information
+
+2\. Dataset Information
 
 
 
-\*\*Dataset:\*\* Telco Customer Churn
+Dataset: Telco Customer Churn
 
-\*\*Problem Type:\*\* Regression
+Problem Type: Regression
 
-\*\*Target Variable:\*\* MonthlyCharges
+Target Variable: MonthlyCharges
 
-\*\*Total Records:\*\* 7,043
+Total Records:7,043
 
-\*\*Train/Test Split:\*\* 70% Training, 15% Validation, 15% Testing
-
-
-
-\---
+Train/Test Split: 70% Training, 15% Validation, 15% Testing
 
 
 
-\## 3. Data Preprocessing
+\-
+
+
+
+&#x20;3. Data Preprocessing
 
 
 
@@ -68,11 +68,11 @@ The following preprocessing techniques were applied before model training:
 
 
 
-\---
 
 
 
-\## 4. Regression Models Evaluated
+
+4\. Regression Models Evaluated
 
 
 
@@ -96,11 +96,13 @@ The following supervised machine learning regression algorithms were trained and
 
 
 
-\---
 
 
 
-\## 5. Evaluation Metrics
+
+
+
+5\. Evaluation Metrics
 
 
 
@@ -126,7 +128,7 @@ The following metrics were used to compare model performance:
 
 
 
-\## 6. Performance Comparison
+&#x20;6. Performance Comparison
 
 
 
@@ -154,11 +156,11 @@ The following metrics were used to compare model performance:
 
 
 
-\## 7. Best Performing Model
+&#x20;7. Best Performing Model
 
 
 
-\### Lasso Regression
+Lasso Regression
 
 
 
@@ -166,33 +168,33 @@ Lasso Regression achieved the best overall performance among all evaluated regre
 
 
 
-\### Reasons
+&#x20;Reasons
 
 
 
-\* Lowest Mean Squared Error (\*\*MSE = 1.070839\*\*)
+\* Lowest Mean Squared Error (MSE = 1.070839)
 
-\* Lowest Root Mean Squared Error (\*\*RMSE = 1.034813\*\*)
+\* Lowest Root Mean Squared Error (RMSE = 1.034813)
 
-\* Highest R² Score (\*\*0.998793\*\*)
+\* Highest R² Score (0.998793)
 
-\* Highest Adjusted R² Score (\*\*0.998757\*\*)
+\* Highest Adjusted R² Score (0.998757)
 
-\* Fast training time (\*\*0.124784 seconds\*\*)
+\* Fast training time (0.124784 seconds)
 
 \* L1 regularization helps reduce overfitting and produces a simpler, more interpretable model by shrinking less important feature coefficients toward zero.
 
 
 
-Although \*\*Random Forest Regressor\*\* achieved the lowest MAE, \*\*Lasso Regression\*\* provided the best overall balance between prediction accuracy, computational efficiency, and model generalization.
+Although Random Forest Regressor achieved the lowest MAE,Lasso Regression provided the best overall balance between prediction accuracy, computational efficiency, and model generalization.
 
 
 
-\---
 
 
 
-\## 8. Model Interpretation
+
+&#x20;8. Model Interpretation
 
 
 
@@ -200,7 +202,7 @@ To improve model interpretability, multiple explanation techniques were applied.
 
 
 
-\### Linear Models
+Linear Models
 
 
 
@@ -208,7 +210,7 @@ To improve model interpretability, multiple explanation techniques were applied.
 
 
 
-\### Tree-Based Models
+Tree-Based Models
 
 
 
@@ -220,7 +222,7 @@ To improve model interpretability, multiple explanation techniques were applied.
 
 
 
-\## 9. Visualizations Generated
+9\. Visualizations Generated
 
 
 
@@ -238,23 +240,23 @@ The following visualizations were produced during model evaluation:
 
 
 
-All figures are available in the \*\*reports/figures/\*\* directory.
+All figures are available in the reports/figures/\*\* directory.
 
 
 
-\---
 
 
 
-\## 10. Conclusion
+
+10\. Conclusion
 
 
 
-Seven supervised machine learning regression algorithms were evaluated to predict customer \*\*MonthlyCharges\*\*.
+Seven supervised machine learning regression algorithms were evaluated to predict customer MonthlyCharges.
 
 
 
-Among the evaluated models, \*\*Lasso Regression\*\* demonstrated the best overall predictive performance by achieving the lowest MSE and RMSE while maintaining an excellent R² Score of \*\*0.998793\*\*. Linear Regression, Ridge Regression, and Elastic Net Regression produced nearly identical results, indicating that the relationship between the input features and monthly charges is predominantly linear. Although Random Forest Regressor achieved the lowest MAE, it required substantially more training time. Decision Tree Regressor and Support Vector Regressor (SVR) showed comparatively higher prediction errors.
+Among the evaluated models, Lasso Regression demonstrated the best overall predictive performance by achieving the lowest MSE and RMSE while maintaining an excellent R² Score of 0.998793. Linear Regression, Ridge Regression, and Elastic Net Regression produced nearly identical results, indicating that the relationship between the input features and monthly charges is predominantly linear. Although Random Forest Regressor achieved the lowest MAE, it required substantially more training time. Decision Tree Regressor and Support Vector Regressor (SVR) showed comparatively higher prediction errors.
 
 
 
