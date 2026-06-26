@@ -118,7 +118,7 @@ The models were evaluated using the following metrics:
 
 
 
-
+\---
 
 
 
@@ -145,6 +145,8 @@ The models were evaluated using the following metrics:
 | Support Vector Regressor (SVR) | 0.850633 | 1.220002 | 1.104537 | 0.998625 | 0.998584 | 20.862295 |          
 
 
+
+\---
 
 7\. Best Performing Model
 
@@ -180,7 +182,7 @@ Although Random Forest achieved the lowest MAE, Lasso Regression demonstrated th
 
 
 
-
+\---
 
 8\. Model Interpretation
 
