@@ -3,6 +3,7 @@ from src.preprocessing import *
 import pandas as pd
 from src.preprocessing import one_hot_encode
 
+
 def test_one_hot_encode():
 
     df = pd.DataFrame({
