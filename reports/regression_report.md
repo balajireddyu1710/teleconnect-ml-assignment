@@ -126,7 +126,7 @@ The models were evaluated using the following metrics:
 
 
 
-| \*\*Model\*\*                      |      \*\*MAE\*\* |      \*\*MSE\*\* |     \*\*RMSE\*\* |       \*\*R²\*\* | \*\*Adjusted R²\*\* | \*\*Training Time (s)\*\* |
+|   Model                        |        MAE   |        MSE   |       RMSE   |         R²   |   Adjusted R²   |   Training Time (s)   |
 
 | ------------------------------ | -----------: | -----------: | -----------: | -----------: | --------------: | --------------------: |
 
@@ -134,13 +134,13 @@ The models were evaluated using the following metrics:
 
 | Ridge Regression               |     0.785850 |     1.070991 |     1.034887 |     0.998793 |        0.998757 |              5.032951 |
 
-| Lasso Regression               |     0.785692 | \*\*1.070839\*\* | \*\*1.034813\*\* | \*\*0.998793\*\* |    \*\*0.998757\*\* |              0.124784 |
+| Lasso Regression               |     0.785692 |     1.070839 |     1.034813 |     0.998793 |        0.998757 |              0.124784 |
 
 | Elastic Net Regression         |     0.785677 |     1.070902 |     1.034844 |     0.998793 |        0.998757 |              2.383212 |
 
 | Decision Tree Regressor        |     0.837972 |     1.286676 |     1.134317 |     0.998549 |        0.998507 |              1.176767 |
 
-| Random Forest Regressor        | \*\*0.784375\*\* |     1.149523 |     1.072158 |     0.998704 |        0.998666 |             18.165512 |
+| Random Forest Regressor        |     0.784375 |     1.149523 |     1.072158 |     0.998704 |        0.998666 |             18.165512 |
 
 | Support Vector Regressor (SVR) |     0.850633 |     1.220002 |     1.104537 |     0.998625 |        0.998584 |             20.862295 |
 
