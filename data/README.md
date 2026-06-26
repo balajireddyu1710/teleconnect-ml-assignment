@@ -1,6 +1,6 @@
 ## Dataset
 
-### Dataset Overview
+### Dataset Overview.
 
 The project uses the **Telco Customer Churn** dataset, which contains customer demographic information, account details, subscribed services, billing information, and churn status. The dataset is widely used for customer churn prediction and machine learning research.
 
