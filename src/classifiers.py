@@ -7,6 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
 from sklearn.model_selection import GridSearchCV
+import numpy as np
 
 def train_logistic(X_train, y_train):
 
