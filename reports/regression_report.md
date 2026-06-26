@@ -128,7 +128,7 @@ The models were evaluated using the following metrics:
 
 | Model | MAE | MSE | RMSE | R² | Adjusted R² | Training Time (s) |
 
-|-------|------|------|------|------|------|------|
+|-------|-----|-----|------|----|-------------|-------------------|
 
 | Linear Regression | 0.785868 | 1.071030 | 1.034906 | 0.998793 | 0.998757 | 0.067227 |
 
@@ -142,7 +142,7 @@ The models were evaluated using the following metrics:
 
 | Random Forest Regressor | 0.784375 | 1.149523 | 1.072158 | 0.998704 | 0.998666 | 18.165512 |
 
-| Support Vector Regressor (SVR) | 0.850633 | 1.220002 | 1.104537 | 0.998625 | 0.998584 | 20.862295 || Lasso Regression            
+| Support Vector Regressor (SVR) | 0.850633 | 1.220002 | 1.104537 | 0.998625 | 0.998584 | 20.862295 |          
 
 
 
