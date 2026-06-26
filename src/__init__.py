@@ -1,5 +1,5 @@
 from .data_loader import load_data
-
+import numpy as np
 from .preprocessing import (
     label_encode,
     one_hot_encode,
