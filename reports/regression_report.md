@@ -1,40 +1,48 @@
+\# Regression Model Evaluation Report
 
 
 
-
-1\. Project Overview
-
-
-
-This report summarizes the performance of multiple supervised machine learning regression models developed to predict customer \*\*MonthlyCharges\*\* using the Telco Customer Churn dataset. The objective is to accurately estimate the monthly charges of customers based on demographic, account, and service-related attributes, enabling better analysis of customer billing patterns.
+\## 1. Project Overview
 
 
 
+This report summarizes the performance of multiple supervised machine learning regression models developed to predict customer \*\*MonthlyCharges\*\* using the Telco Customer Churn dataset. The objective is to accurately estimate the monthly charges of customers based on demographic, account, and service-related attributes, enabling better analysis of customer billing behavior and pricing patterns.
 
 
 
-
-2\. Dataset Information
-
-
-
-Dataset: Telco Customer Churn
-
-Problem Type: Regression
-
-Target Variable: MonthlyCharges
-
-Total Records:7,043
-
-Train/Test Split: 70% Training, 15% Validation, 15% Testing
+\---
 
 
 
-\-
+\## 2. Dataset Information
 
 
 
-&#x20;3. Data Preprocessing
+\*\*Dataset:\*\* Telco Customer Churn
+
+
+
+\*\*Problem Type:\*\* Regression
+
+
+
+\*\*Target Variable:\*\* MonthlyCharges
+
+
+
+\*\*Total Records:\*\* 7,043
+
+
+
+\*\*Train/Test Split:\*\* 70% Training, 15% Validation, 15% Testing
+
+
+
+\---
+
+
+
+\## 3. Data Preprocessing
 
 
 
@@ -60,7 +68,7 @@ The following preprocessing techniques were applied before model training:
 
 \* Standard Scaling for Lasso Regression and Support Vector Regressor (SVR)
 
-\* Stratified Train/Validation/Test Split
+\* Train/Validation/Test Split
 
 \* Hyperparameter tuning using GridSearchCV
 
@@ -68,15 +76,15 @@ The following preprocessing techniques were applied before model training:
 
 
 
+\---
 
 
 
-
-4\. Regression Models Evaluated
-
+\## 4. Regression Models Evaluated
 
 
-The following supervised machine learning regression algorithms were trained and evaluated:
+
+The following supervised machine learning algorithms were trained and evaluated:
 
 
 
@@ -96,13 +104,11 @@ The following supervised machine learning regression algorithms were trained and
 
 
 
+\---
 
 
 
-
-
-
-5\. Evaluation Metrics
+\## 5. Evaluation Metrics
 
 
 
@@ -128,7 +134,7 @@ The following metrics were used to compare model performance:
 
 
 
-&#x20;6. Performance Comparison
+\## 6. Performance Comparison
 
 
 
@@ -156,11 +162,11 @@ The following metrics were used to compare model performance:
 
 
 
-&#x20;7. Best Performing Model
+\## 7. Best Performing Model
 
 
 
-Lasso Regression
+\### Lasso Regression
 
 
 
@@ -168,53 +174,25 @@ Lasso Regression achieved the best overall performance among all evaluated regre
 
 
 
-&#x20;Reasons
+\### Reasons
 
 
 
-\* Lowest Mean Squared Error (MSE = 1.070839)
+\* Lowest Mean Squared Error (\*\*1.070839\*\*)
 
-\* Lowest Root Mean Squared Error (RMSE = 1.034813)
+\* Lowest Root Mean Squared Error (\*\*1.034813\*\*)
 
-\* Highest R² Score (0.998793)
+\* Highest R² Score (\*\*0.998793\*\*)
 
-\* Highest Adjusted R² Score (0.998757)
+\* Highest Adjusted R² Score (\*\*0.998757\*\*)
 
-\* Fast training time (0.124784 seconds)
+\* Very fast training time (\*\*0.124784 seconds\*\*)
 
-\* L1 regularization helps reduce overfitting and produces a simpler, more interpretable model by shrinking less important feature coefficients toward zero.
-
-
-
-Although Random Forest Regressor achieved the lowest MAE,Lasso Regression provided the best overall balance between prediction accuracy, computational efficiency, and model generalization.
+\* L1 regularization improves model generalization while reducing unnecessary feature coefficients, making the model more interpretable.
 
 
 
-
-
-
-
-&#x20;8. Model Interpretation
-
-
-
-To improve model interpretability, multiple explanation techniques were applied.
-
-
-
-Linear Models
-
-
-
-\* Regression coefficients were analyzed for Linear Regression, Ridge Regression, Lasso Regression, and Elastic Net Regression to understand the direction and magnitude of each feature's influence on monthly charges.
-
-
-
-Tree-Based Models
-
-
-
-\* Feature importance scores were extracted from Decision Tree and Random Forest Regressors to identify the most influential predictors affecting customer monthly charges.
+Although \*\*Random Forest Regressor\*\* achieved the lowest Mean Absolute Error (MAE), \*\*Lasso Regression\*\* demonstrated the best balance between prediction accuracy, computational efficiency, and model simplicity.
 
 
 
@@ -222,7 +200,51 @@ Tree-Based Models
 
 
 
-9\. Visualizations Generated
+\## 8. Model Interpretation
+
+
+
+To improve model interpretability, multiple explanation techniques were applied.
+
+
+
+\### Linear Regression Models
+
+
+
+\* Regression coefficients were analyzed for Linear Regression, Ridge Regression, Lasso Regression, and Elastic Net Regression to determine the direction and magnitude of each feature's contribution toward predicting MonthlyCharges.
+
+
+
+\### Decision Tree Regressor
+
+
+
+\* Feature importance scores were extracted to identify the most influential predictors used during tree construction.
+
+
+
+\### Random Forest Regressor
+
+
+
+\* Ensemble feature importance analysis was performed to determine which variables contributed most significantly to MonthlyCharges prediction.
+
+
+
+\### Coefficient Comparison
+
+
+
+\* The coefficients of Linear Regression, Ridge Regression, and Lasso Regression were compared to observe the effect of regularization on feature weights. Lasso Regression reduced less important coefficients toward zero, producing a simpler and more interpretable model.
+
+
+
+\---
+
+
+
+\## 9. Visualizations Generated
 
 
 
@@ -234,33 +256,41 @@ The following visualizations were produced during model evaluation:
 
 \* Residual Error Distribution
 
-\* Regression Coefficient Importance Plot
+\* Linear Regression Coefficient Importance
 
-\* Tree-Based Feature Importance Plot
+\* Ridge Regression Coefficient Importance
 
+\* Lasso Regression Coefficient Importance
 
+\* Decision Tree Feature Importance
 
-All figures are available in the reports/figures/\*\* directory.
+\* Random Forest Feature Importance
 
-
-
-
-
-
-
-10\. Conclusion
+\* Regression Model Performance Comparison
 
 
 
-Seven supervised machine learning regression algorithms were evaluated to predict customer MonthlyCharges.
+All figures are available in the \*\*reports/figures/\*\* directory.
 
 
 
-Among the evaluated models, Lasso Regression demonstrated the best overall predictive performance by achieving the lowest MSE and RMSE while maintaining an excellent R² Score of 0.998793. Linear Regression, Ridge Regression, and Elastic Net Regression produced nearly identical results, indicating that the relationship between the input features and monthly charges is predominantly linear. Although Random Forest Regressor achieved the lowest MAE, it required substantially more training time. Decision Tree Regressor and Support Vector Regressor (SVR) showed comparatively higher prediction errors.
+\---
 
 
 
-The developed regression pipeline includes preprocessing, feature engineering, hyperparameter optimization, model evaluation, model interpretation, visualization, and model persistence, providing a complete and reproducible machine learning workflow.
+\## 10. Conclusion
+
+
+
+Seven supervised machine learning regression algorithms were evaluated for predicting customer \*\*MonthlyCharges\*\*.
+
+
+
+Among the evaluated models, \*\*Lasso Regression\*\* demonstrated the best overall predictive performance by achieving the lowest Mean Squared Error (MSE) and Root Mean Squared Error (RMSE) while maintaining an excellent R² Score of \*\*0.998793\*\*. Linear Regression, Ridge Regression, and Elastic Net Regression produced nearly identical results, indicating a strong linear relationship between the selected features and the target variable. Although Random Forest Regressor achieved the lowest Mean Absolute Error (MAE), it required substantially longer training time. Decision Tree Regressor and Support Vector Regressor (SVR) exhibited comparatively higher prediction errors.
+
+
+
+The developed regression pipeline includes preprocessing, feature engineering, hyperparameter optimization, model evaluation, visualization, model interpretation, and model persistence, providing a complete, reproducible, and efficient machine learning workflow.
 
 
 
@@ -282,11 +312,13 @@ Future improvements may include:
 
 \* Advanced feature selection techniques
 
-\* Ensemble regression methods
+\* Ensemble regression models
+
+\* Automated Machine Learning (AutoML)
 
 \* Model deployment using Flask or FastAPI
 
-\* Real-time Monthly Charges prediction dashboard
+\* Real-time MonthlyCharges prediction dashboard
 
 
 
