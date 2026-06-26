@@ -95,7 +95,7 @@ teleconnect-ml-assignment/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/teleconnect-ml-assignment.git
+git clone https://github.com/balajireddyu1710/teleconnect-ml-assignment.git
 
 cd teleconnect-ml-assignment
 ```
